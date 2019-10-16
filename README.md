@@ -34,8 +34,11 @@ Your goal is to build out all of the methods listed in the deliverables. Do your
 First step is to model the domain you are building out. As a non-discriminatory cult recruitment platform, `Cult`s will have many `Follower`s while `Follower`s will be allowed to join many `Cult`s. How do they keep track of this? `BloodOath`s of course! You cannot join a `Cult` without making a `BloodOath`.
 
 * What are your models?
+  #bloodOath,Cult, and Followers
 * What does your schema look like?
+  #bloodOath --> Cult & Followers
 * What are the relationships between your models?
+  # BloodOath is the parent class, while cult and followers will the children classes  
 
 ---
 
@@ -49,7 +52,7 @@ Questions you should ask yourself:
 * Should I write any other methods?
 * Am I following _Single Source of Truth_?
 
-**`Cult`**
+**`Cult`** ### Complete
 
 * `Cult#name`
   * returns a `String` that is the cult's name
