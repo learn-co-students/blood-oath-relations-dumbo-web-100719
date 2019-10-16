@@ -34,8 +34,17 @@ Your goal is to build out all of the methods listed in the deliverables. Do your
 First step is to model the domain you are building out. As a non-discriminatory cult recruitment platform, `Cult`s will have many `Follower`s while `Follower`s will be allowed to join many `Cult`s. How do they keep track of this? `BloodOath`s of course! You cannot join a `Cult` without making a `BloodOath`.
 
 * What are your models?
+cult
+follower
+blood oath
+
 * What does your schema look like?
+
 * What are the relationships between your models?
+a cult has_many blood oaths
+a follower has_many blood oaths
+a blood oath belongs_to a cult, and belongs_to a follower
+
 
 ---
 
