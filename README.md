@@ -34,8 +34,16 @@ Your goal is to build out all of the methods listed in the deliverables. Do your
 First step is to model the domain you are building out. As a non-discriminatory cult recruitment platform, `Cult`s will have many `Follower`s while `Follower`s will be allowed to join many `Cult`s. How do they keep track of this? `BloodOath`s of course! You cannot join a `Cult` without making a `BloodOath`.
 
 * What are your models?
+Cult, 
+BloodOath,
+and Followers
+
 * What does your schema look like?
+Cult <---> BloodOath <---> Followers
+
 * What are the relationships between your models?
+Cult has many Followers, Followers can join many Cults
+A BloodOath has many Cults and Followers
 
 ---
 
@@ -51,49 +59,49 @@ Questions you should ask yourself:
 
 **`Cult`**
 
-* `Cult#name`
+* `Cult#name` DONE
   * returns a `String` that is the cult's name
-* `Cult#location`
+* `Cult#location` DONE
   * returns a `String` that is the city where the cult is located
-* `Cult#founding_year`
+* `Cult#founding_year` DONE
   * returns a `Fixnum` that is the year the cult was founded
-* `Cult#slogan`
+* `Cult#slogan` DONE
   * returns a `String` that is this cult's slogan
-* `Cult#recruit_follower`
+* `Cult#recruit_follower` DONE
   * takes in an argument of a `Follower` instance and adds them to this cult's list of followers
-* `Cult#cult_population`
+* `Cult#cult_population` DONE
   * returns a `Fixnum` that is the number of followers in this cult
-* `Cult.all`
+* `Cult.all` DONE
   * returns an `Array` of all the cults
-* `Cult.find_by_name`
+* `Cult.find_by_name` DONE
   * takes a `String` argument that is a name and returns a `Cult` instance whose name matches that argument
-* `Cult.find_by_location`
+* `Cult.find_by_location` DONE
   * takes a `String` argument that is a location and returns an `Array` of cults that are in that location
-* `Cult.find_by_founding_year`
+* `Cult.find_by_founding_year` DONE
   * takes a `Fixnum` argument that is a year and returns all of the cults founded in that year
 
 **`Follower`**
 
-* `Follower#name`
+* `Follower#name` DONE
   * returns a `String` that is the follower's name
-* `Follower#age`
+* `Follower#age`DONE 
   * returns a `Fixnum` that is the age of the follower
-* `Follower#life_motto`
+* `Follower#life_motto` DONE
   * returns a `String` that is the follower's life motto
-* `Follower#cults`
+* `Follower#cults` DONE
   * returns an `Array` of this follower's cults
-* `Follower#join_cult`
+* `Follower#join_cult` DONE
   * takes in an argument of a `Cult` instance and adds this follower to the cult's list of followers
-* `Follower.all`
+* `Follower.all` DONE
   * returns an `Array` of all the followers
-* `Follower.of_a_certain_age`
+* `Follower.of_a_certain_age` DONE
   * takes a `Fixnum` argument that is an age and returns an `Array` of followers who are the given age or older
 
 **`BloodOath`**
 
-* `BloodOath#initiation_date`
-  * returns a `String` that is the initiation date of this blood oath in the format _YYYY-MM-DD_.
-* `BloodOath.all`
+* `BloodOath#initiation_date` DONE (maybe)
+  * returns a `String` that is the initiation date of this blood oath in the format _YYYY-MM-DD]_.
+* `BloodOath.all` DONE
   * returns an `Array` of all the blood oaths
 
 ---
